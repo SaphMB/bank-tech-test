@@ -13,6 +13,11 @@ class Account
     add_transaction(deposit)
   end
 
+  def withdraw(withdrawal)
+    decrease_balance(withdrawal)
+    add_transaction(withdrawal)
+  end
+
   private
 
   attr_writer :balance, :transactions
@@ -21,9 +26,11 @@ class Account
     @balance += deposit.amount
   end
 
+  def decrease_balance(withdrawal)
+    @balance -= withdrawal.amount
+  end
+
   def add_transaction(transaction)
     @transactions << transaction
   end
-
-
 end
