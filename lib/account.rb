@@ -1,5 +1,4 @@
 class Account
-
   DEFAULT_BALANCE = 0
 
   attr_reader :balance
@@ -8,5 +7,4 @@ class Account
     @transactions = []
     @balance = DEFAULT_BALANCE
   end
-
 end
