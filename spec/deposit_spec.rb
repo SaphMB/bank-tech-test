@@ -13,4 +13,11 @@ describe Deposit do
       expect(deposit.date).to eq Time.now.strftime('%d/∞m/∞y')
     end
   end
+
+  describe '#new_balance' do
+    it 'stores a balance' do
+      deposit.update_balance(50)
+      expect(deposit.new_balance).to eq 50
+    end
+  end
 end
