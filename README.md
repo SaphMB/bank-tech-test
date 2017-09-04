@@ -1,4 +1,4 @@
-# Bank tech test
+# Bank tech test
 
 The bank scripts allows a user to create a bank account, make deposits, make withdrawals and view their transaction in a statement.
 
