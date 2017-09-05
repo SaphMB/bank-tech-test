@@ -3,7 +3,7 @@ class Deposit
 
   def initialize(amount)
     @amount = amount
-    @date = Time.new.strftime("%d/%m/%y")
+    @date = Time.new.strftime('%d/%m/%y')
   end
 
   def update_balance(balance)

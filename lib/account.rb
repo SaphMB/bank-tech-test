@@ -31,7 +31,6 @@ class Account
 
   def increase_balance(deposit)
     @balance += deposit.amount
-
   end
 
   def decrease_balance(withdrawal)
@@ -43,10 +42,10 @@ class Account
   end
 
   def sort_by_date
-    @transactions.sort_by! {|transaction| transaction.date}
+    @transactions.sort_by! { |transaction| transaction.date }
   end
 
   def check_balance(withdrawal)
-    raise "Insufficient funds" if balance < withdrawal.amount
+    raise 'Insufficient funds' if balance < withdrawal.amount
   end
 end

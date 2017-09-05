@@ -19,7 +19,6 @@ describe Account do
   end
 
   describe '#deposit' do
-
     it 'updates the balance by the deposit amount' do
       expect { account.deposit(deposit) } .to change { account.balance } .by(50)
     end
@@ -31,7 +30,6 @@ describe Account do
   end
 
   describe '#withdrawal' do
-
     it 'updates the balance by the deposit amount' do
       account.deposit(deposit)
       expect { account.withdraw(withdrawal) } .to change { account.balance } .by(-50)
@@ -46,7 +44,7 @@ describe Account do
     it 'prevents withdrawals that result in a negative balance' do
       account.deposit(deposit)
       account.withdraw(withdrawal)
-      expect { account.withdraw(withdrawal) } .to raise_error(RuntimeError, "Insufficient funds")
+      expect { account.withdraw(withdrawal) } .to raise_error(RuntimeError, 'Insufficient funds')
     end
   end
 end
