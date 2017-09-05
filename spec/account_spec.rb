@@ -14,6 +14,7 @@ describe Account do
 
     before do
       allow(deposit).to receive(:amount) { 50 }
+      allow(deposit).to receive(:update_balance) { 50 }
     end
 
     it 'updates the balance by the deposit amount' do
@@ -31,6 +32,7 @@ describe Account do
 
     before do
       allow(withdrawal).to receive(:amount) { 50 }
+      allow(withdrawal).to receive(:update_balance) { 50 }
     end
 
     it 'updates the balance by the deposit amount' do

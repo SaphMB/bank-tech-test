@@ -9,4 +9,10 @@ class Withdrawal
   def update_balance(balance)
     @new_balance = balance
   end
+
+  private
+
+  def to_string
+    "#{date} || #{amount} || || #{new_balance}"
+  end
 end

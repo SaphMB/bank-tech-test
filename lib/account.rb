@@ -10,12 +10,18 @@ class Account
 
   def deposit(deposit)
     increase_balance(deposit)
+    deposit.update_balance(balance)
     add_transaction(deposit)
   end
 
   def withdraw(withdrawal)
     decrease_balance(withdrawal)
+    withdrawal.update_balance(balance)
     add_transaction(withdrawal)
+  end
+
+  def print_statement(print_class)
+    print_class.new.print_statement(@transactions)
   end
 
   private
@@ -24,6 +30,7 @@ class Account
 
   def increase_balance(deposit)
     @balance += deposit.amount
+
   end
 
   def decrease_balance(withdrawal)
@@ -32,5 +39,9 @@ class Account
 
   def add_transaction(transaction)
     @transactions << transaction
+  end
+
+  def sort_by_date
+    @transactions.sort_by! {|transaction| transaction.date}
   end
 end
