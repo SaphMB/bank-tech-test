@@ -10,7 +10,7 @@ describe Deposit do
     end
 
     it 'stores the date the deposit was created at' do
-      expect(deposit.date).to eq Time.now.strftime('%d/∞m/∞y')
+      expect(deposit.date).to eq Time.now.strftime('%d/%m/%y')
     end
   end
 

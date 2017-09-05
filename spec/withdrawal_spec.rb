@@ -10,7 +10,7 @@ describe Withdrawal do
     end
 
     it 'stores the date the withdrawal was created at' do
-      expect(withdrawal.date).to eq Time.now.strftime('%d/∞m/∞y')
+      expect(withdrawal.date).to eq Time.now.strftime('%d/%m/%y')
     end
   end
 

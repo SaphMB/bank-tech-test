@@ -3,16 +3,20 @@ class Withdrawal
 
   def initialize(amount)
     @amount = amount
-    @date = Time.now.strftime('%d/∞m/∞y')
+    @date = Time.now.strftime('%d/%m/%y')
   end
 
   def update_balance(balance)
     @new_balance = balance
   end
 
+  def to_string
+    convert
+  end
+
   private
 
-  def to_string
+  def convert
     "#{date} || #{amount} || || #{new_balance}"
   end
 end
