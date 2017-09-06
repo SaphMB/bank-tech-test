@@ -17,6 +17,10 @@ class Withdrawal
   private
 
   def convert
-    "#{date} || #{amount} || || #{new_balance}"
+    "#{date} || #{format_currency(amount)} || || #{format_currency(new_balance)}"
+  end
+
+  def format_currency(number)
+    sprintf('%.2f', number)
   end
 end
