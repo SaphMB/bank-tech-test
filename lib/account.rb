@@ -42,7 +42,7 @@ class Account
   end
 
   def sort_by_date
-    @transactions.sort_by! { |transaction| transaction.date }
+    @transactions.sort_by! { |transaction| transaction.date }.reverse
   end
 
   def check_balance(withdrawal)

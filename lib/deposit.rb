@@ -10,13 +10,9 @@ class Deposit
     @new_balance = balance
   end
 
-  def to_string
-    convert
-  end
-
   private
 
-  def convert
+  def to_string
     "#{date} || #{format_currency(amount)} || || #{format_currency(new_balance)}"
   end
 
