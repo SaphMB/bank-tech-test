@@ -5,7 +5,7 @@ describe Printer do
   describe '#print_statement' do
     let(:deposit_1) { double 'deposit' }
     let(:deposit_2) { double 'deposit' }
-    let(:withdrawal) { double 'deposit' }
+    let(:withdrawal) { double 'withdrawal' }
     let(:transactions) { [deposit_1, deposit_2, withdrawal] }
 
     it 'prints the transactions in the correct format' do
